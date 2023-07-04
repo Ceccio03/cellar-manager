@@ -34,9 +34,9 @@ class GUI {
         const dop = prompt('Inserisci l\'anno di produzione');
         const vol = prompt('Inserisci gradazione alcolica');
         const type = prompt('Inserisci la tipologia');
-        const drink = new Beverage(name, maker, dop, vol, type);
+        const beverage = new Beverage(name, maker, dop, vol, type);
 
-        this.beverage.add
+        this.beverage.addBeverage
     }
 
 }
