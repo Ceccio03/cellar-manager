@@ -39,4 +39,18 @@ class GUI {
         this.beverage.addBeverage
     }
 
+    showBeverages() {
+        const allBeverages = this.cellar.getAllBeverageCards();
+
+        alert(allBeverages);
+    }
+
+    deleteBeverage() {
+        const humanIndex = prompt('Inserisci il numero della bevanda da eliminare');
+        const index = humanIndex - 1;
+        this.cellar.deleteBeverage(index);
+
+        this.storage.saveData(this.beverage.publications);
+
+    }
 }
