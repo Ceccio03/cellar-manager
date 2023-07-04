@@ -21,8 +21,8 @@ class Beverage {
     }
 
     toString() {
-        const drink = 'Nome: ' + this.name + '\n' + 'Produttore: ' + this.maker + '\n' + 'Data produzione: ' + this.dop + '\n' + 'Quantità: ' + this.vol + '\n' + 'Tipo bevanda: ' + this.type + '\n';
+        const beverage = 'Nome: ' + this.name + '\n' + 'Produttore: ' + this.maker + '\n' + 'Data produzione: ' + this.dop + '\n' + 'Quantità: ' + this.vol + '\n' + 'Tipo bevanda: ' + this.type + '\n';
 
-        return drink;
+        return beverage;
     }
 }

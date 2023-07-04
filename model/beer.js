@@ -5,8 +5,8 @@ class Beer extends Beverage {
     }
 
     toString() {
-        const drink = super.toString() + 'Malt: ' + this.malt + '\n';
+        const beverage = super.toString() + 'Malt: ' + this.malt + '\n';
 
-        return drink;
+        return beverage;
     }
 }
