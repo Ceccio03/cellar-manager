@@ -50,7 +50,7 @@ class GUI {
         const index = humanIndex - 1;
         this.cellar.deleteBeverage(index);
 
-        this.storage.saveData(this.beverage.publications);
+        this.storage.saveData(this.beverage.beveragesArray);
 
     }
 }
