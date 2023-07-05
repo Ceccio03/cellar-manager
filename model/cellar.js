@@ -3,6 +3,12 @@ class Cellar {
         this.beveragesArray = beveragesArray;
     }
 
+    get beverageCount() {
+        const count = this.beveragesArray.length;
+
+        return count;
+    }
+
     addBeverage(beverage) {
         this.beveragesArray.push(beverage);
     }
@@ -36,5 +42,8 @@ class Cellar {
                 tempArray.push(beer);
             }
         }
+        const newCellar = new Cellar(tempArray);
+
+        return newCellar;
     }
 }

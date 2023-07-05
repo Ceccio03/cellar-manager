@@ -3,7 +3,7 @@ class GUI {
         const data = Storage.loadData();
 
         if (data !== null) {
-            this.beverage.fromDbObject(data);
+            this.cellar = Cellar.fromDbObject(data);
         } else {
             this.cellar = new Cellar();
         }
@@ -11,7 +11,7 @@ class GUI {
 
     start() {
         while (true) {
-            const firstChoice = prompt('Hai 4 opzioni: \n' + '1) Guarda la lista delle bevande\n' + '2) Aggiungi una bevanda\n' + '3) Rimuovi una bevanda\n' + '4) Esci dal programma');
+            const firstChoice = prompt("Ciao utente la nostra cantina ha a disposizione " + this.cellar.beveragesArray.length + "Hai 4 opzioni: \n" + "1) Guarda la lista delle bevande\n" + "2) Aggiungi una bevanda\n" + "3) Rimuovi una bevanda\n" + "4) Esci dal programma");
 
             if (firstChoice === '1') {
                 this.showBeverages();
