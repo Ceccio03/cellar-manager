@@ -42,14 +42,14 @@ class GUI {
         const type = prompt('Inserisci la tipologia');
         const beverage = new Beverage(name, maker, dop, vol, type);
 
-        this.beverage.addBeverage
+        this.cellar.addBeverage(beverage);
     }
 
     deleteBeverage() {
         const humanIndex = prompt('Inserisci il numero della bevanda da eliminare');
         const index = humanIndex - 1;
-        this.cellar.removeBeverage(index);
 
+        this.cellar.removeBeverage(index);
         this.storage.saveData(this.beverage.beveragesArray);
 
     }

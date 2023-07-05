@@ -3,8 +3,8 @@ class Cellar {
         this.beveragesArray = beveragesArray;
     }
 
-    addBeverage(bev) {
-        this.beveragesArray.push(bev);
+    addBeverage(beverage) {
+        this.beveragesArray.push(beverage);
     }
 
     removeBeverage(index) {
@@ -15,10 +15,10 @@ class Cellar {
         let allCards = '';
 
         for (let i = 0; i < this.beveragesArray.length; i++) {
-            const bev = this.beveragesArray[i];
+            const element = this.beveragesArray[i];
             const humanIndex = i + 1;
 
-            allCards += humanIndex + ') ' + bev.toString();
+            allCards += humanIndex + ') ' + element.toString();
             allCards += '------------------------------\n';
         }
         return allCards;
