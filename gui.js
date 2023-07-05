@@ -1,12 +1,11 @@
 class GUI {
     constructor() {
-        this.storage = new Storage();
-        this.cellar = new Cellar();
+        const data = Storage.loadData();
 
-        const data = this.storage.loadData();
-
-        if (data) {
+        if (data !== null) {
             this.beverage.fromDbObject(data);
+        } else {
+            this.cellar = new Cellar();
         }
     }
 

@@ -24,10 +24,17 @@ class Cellar {
         return allCards;
     }
 
-    fromDbObjects(data) {
+    static fromDbObject(data) {
+        const tempArray = [];
+
         for (const genericObject of data) {
-            const beverage = new Beverage(genericObject.name, genericObject.maker, genericObject.dop, genericObject.vol, genericObject.type);
-            this.beveragesArray.push(beverage);
+            if (genericObject.region) {
+                const wine = new Wine(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.region, genericObject.vine);
+                tempArray.push(wine);
+            } else {
+                const beer = new Beer(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.malt);
+                tempArray.push(beer);
+            }
         }
     }
 }
