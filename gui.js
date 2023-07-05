@@ -45,7 +45,7 @@ class GUI {
         const maker = prompt('Inserisci il produttore');
         const vol = parseInt(prompt('Inserisci gradazione alcolica'));
         const type = prompt('Inserisci la tipologia');
-        const dop = prompt('Inserisci la data');
+        const dop = prompt('Inserisci la data (gg/mm/aaaa)');
 
         if (insertChoice === 'birra') {
             const malt = prompt('Inserisci il tipo di malto');

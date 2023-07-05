@@ -23,7 +23,7 @@ class Beverage {
     }
 
     get dop() {
-        return this._dop;
+        return this._dop.toISOString();
     }
 
     toString() {
