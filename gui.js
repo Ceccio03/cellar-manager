@@ -28,6 +28,12 @@ class GUI {
         }
     }
 
+    showBeverages() {
+        const allBeverages = this.cellar.getAllBeverageCards();
+
+        alert(allBeverages);
+    }
+
     insertBeverage() {
         const name = prompt('Inserisci nome');
         const maker = prompt('Inserisci il produttore');
@@ -37,12 +43,6 @@ class GUI {
         const beverage = new Beverage(name, maker, dop, vol, type);
 
         this.beverage.addBeverage
-    }
-
-    showBeverages() {
-        const allBeverages = this.cellar.getAllBeverageCards();
-
-        alert(allBeverages);
     }
 
     deleteBeverage() {
