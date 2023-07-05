@@ -45,16 +45,17 @@ class GUI {
         const maker = prompt('Inserisci il produttore');
         const vol = parseInt(prompt('Inserisci gradazione alcolica'));
         const type = prompt('Inserisci la tipologia');
+        const dop = prompt('Inserisci la data');
 
         if (insertChoice === 'birra') {
             const malt = prompt('Inserisci il tipo di malto');
-            const beer = new Beer(name, maker, vol, type, malt);
+            const beer = new Beer(name, maker, vol, type, dop, malt);
 
             this.cellar.addBeverage(beer);
         } else {
             const region = prompt('Inseriesci la regione');
             const vine = prompt('Inserisci il vitigno');
-            const wine = new Wine(name, maker, vol, type, region, vine);
+            const wine = new Wine(name, maker, vol, type, dop, region, vine);
 
             this.cellar.addBeverage(wine);
         }

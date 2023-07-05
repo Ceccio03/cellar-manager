@@ -35,10 +35,10 @@ class Cellar {
 
         for (const genericObject of data) {
             if (genericObject.region) {
-                const wine = new Wine(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.region, genericObject.vine);
+                const wine = new Wine(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.dop, genericObject.region, genericObject.vine);
                 tempArray.push(wine);
             } else {
-                const beer = new Beer(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.malt);
+                const beer = new Beer(genericObject.name, genericObject.maker, genericObject.vol, genericObject.type, genericObject.dop, genericObject.malt);
                 tempArray.push(beer);
             }
         }
