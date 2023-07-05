@@ -48,7 +48,7 @@ class GUI {
     deleteBeverage() {
         const humanIndex = prompt('Inserisci il numero della bevanda da eliminare');
         const index = humanIndex - 1;
-        this.cellar.deleteBeverage(index);
+        this.cellar.removeBeverage(index);
 
         this.storage.saveData(this.beverage.beveragesArray);
 

@@ -7,7 +7,7 @@ class Cellar {
         this.beveragesArray.push(bev);
     }
 
-    deleteBeverage(index) {
+    removeBeverage(index) {
         this.beveragesArray.splice(index, 1);
     }
 
